@@ -22,6 +22,7 @@ fun App() {
 
     rememberCoroutineScope().launch {
         val response = apolloClient.query(LaunchListQuery()).execute()
+
         println(response.data?.toJsonString())
     }
 
